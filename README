@@ -15,8 +15,20 @@ The server may be run with:
 The program accepts all commands as per the specification for cp, rm, list,
 and quit. The program does not exit if too many arguments are provided to
 a command. The program does not exit on a failed command, but continues to 
-prompt the user for commands. 
+prompt the user for commands.
 
+usage:
+    cp c:cloudfile localfile
+    cp localfile c:cloudfile
+    cp c:cloudfile c:cloudfile
+    cp localfile localfile 
+    
+    rm c:cloudfile
+    rm localfile
+     
+    list
+
+    done (exit, or ctrl-D)
 
 Originally I had planned to write the program using structs for each
 message, but I did not. I was concerned that gcc would change the 
