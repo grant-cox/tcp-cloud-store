@@ -1,0 +1,24 @@
+Grant Cox
+UKY CS 270 
+Project 4
+
+This project implements a simple, unbuffered TCP file transfer application
+with a limit of 100KB / file. Make the server and client programs by:
+    make all
+
+The client may be run with:
+    ./mycloudclient ServerName TCPport SecretKey
+
+The server may be run with:
+    ./mycloudserver TCPport SecretKey
+
+The program accepts all commands as per the specification for cp, rm, list,
+and quit. The program does not exit if too many arguments are provided to
+a command. The program does not exit on a failed command, but continues to 
+prompt the user for commands. 
+
+
+Originally I had planned to write the program using structs for each
+message, but I did not. I was concerned that gcc would change the 
+order of the data members of the structs and I would get malformed 
+data.

@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\author{Grant Cox}
+
+\begin{document}
+
+\section{Sockets Interface Helper Functions}
+    \subsection{open\_clientfd}
+        Client establishes a connection with the server by calling this
+
+        \bigskip
+        \begin{verbatim}
+            #include "csapp.h"
+            int open_client(char * hostname, char * port);
+        \end{verbatim}
+        
+        \bigskip
+        \begin{itemize}
+            \item establishes connection with server running at hostmane listening on port
+            \item returns open socket descriptor that is ready for I/O using Unix I/O functions
+        \end{itemize}
+        
+    \subsection{open\_listenfd}
+        Returns a listening descriptor that is ready to receive connection requests on port \textit{port}. 
+        \bigskip
+        \begin{verbatim}
+            #include "csapp.h"
+            int open_listenfd(char * port);
+        \end{verbatim}
+        
+\section{Example Echo Client and Server}
+    "After establishing a connection with the server, the client enters a loop that repeatedly reads a text line from standard input, sends the text line to the server, reads the echo line from the server, and prints the result to standard output, The loop tenninaes when, fgets encounters EOF on standard input, either because the user typed Ctrl+D at the keyboard or because it has exhausted the text lines in a redirected input file."
+
+    
+
+\end{document}
